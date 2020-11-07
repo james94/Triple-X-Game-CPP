@@ -39,9 +39,9 @@ class TripleX {
     bool LevelComplete;
     Player *tripleXPlayer;
 
-    void PrintStory(std::string FullName)
+    void PrintStory()
     {
-        std::cout << "\n\nHello " + FullName;
+        std::cout << "\n\nHello " + tripleXPlayer->GetName();
         std::cout << "\nYou are a secret agent breaking into a level " << Difficulty;
         std::cout << " secure server room...\nYou need to enter the correct codes to continue...\n\n";
     }
@@ -84,7 +84,7 @@ class TripleX {
 
     bool PlayGame()
     {
-        PrintStory(tripleXPlayer->GetName());
+        PrintStory();
 
         const int CodeA = GenerateCode();
         const int CodeB = GenerateCode();
